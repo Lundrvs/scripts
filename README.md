@@ -1,2 +1,3 @@
-# scripts
-scripts en bash, sh, batch y powershell, entre otros...
+# Mis scripts
+
+* ![bash]()
