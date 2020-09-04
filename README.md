@@ -2,6 +2,6 @@
 
 * Script that logs all the programs which the user has executed during the day:
 
-  - In [bash](https://github.com/Lundrvs/scripts/blob/master/bash/scripts/psDateLog.sh)
+  - In [bash](https://github.com/Lundrvs/scripts/blob/master/bash/psDateLog.sh)
 
   - In [batch]()
