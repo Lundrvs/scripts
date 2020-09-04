@@ -1,4 +1,5 @@
 #!/bin/bash
+# Log programs executed by the user during the day.
 #
 #This variable stores the current date:
 currentDate=$(date +"%b %d %a %y")
