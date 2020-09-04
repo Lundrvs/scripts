@@ -15,6 +15,6 @@ echo -e "\n" >> ./.lgs/${USER}/"$currentDate".txt
 echo $(ps -U ${USER} -o comm=) >> ./.lgs/${USER}/"$currentDate".txt
 rm -r ./.lgs/${USER}/.txt 2>/dev/null
 #
-#You can run this script in background mode and set it to be executed during boot through your System's settings.
+#You can run this script in background mode and set it to be executed during boot and every minute of the day through your System's settings.
 #
 #By Leandro G.
