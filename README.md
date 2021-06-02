@@ -1,4 +1,4 @@
 # Scripts...
 
-  - In [bash](https://github.com/Lundrvs/scripts/blob/master/bash/README.md)
+  - On [bash](https://github.com/Lundrvs/scripts/blob/master/bash/README.md)
 

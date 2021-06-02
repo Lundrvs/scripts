@@ -4,4 +4,8 @@
 
 * **[Scheduling any command on the terminal (also in background)](./time/processSchedule.bash)**
 
-	*This is done withot crontab.*
+	*This is done without crontab.*
+
+* **Generate random values to the terminal**
+
+	* [Version 1](./time/genRandom1.bash)
