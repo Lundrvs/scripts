@@ -7,7 +7,7 @@ Prints the current time on real time (second by second). As if you were watching
 
 Prints the current time in 24h format.
 
-Why I did this? Because it is a lot disturbing to type "date +%H:%M" everytime I want to watch the time and I have the panel hidden
+Why did I do this? Because it is a lot disturbing to type "date +%H:%M" everytime I want to watch the time and I have the panel hidden
 and the shell in full screen...
 
 * [shedown](./shedown.bash)
