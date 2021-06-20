@@ -7,6 +7,9 @@ What this script does is to print the current time on real time (second by secon
 
 What this script does is to print the current time in 24h format.
 
+Why I did this? Because it is a lot disturbing to type "date +%H:%M" everytime I want to watch the time and I have the panel hidden
+and the shell in full screen...
+
 * [shedown](./shedown.bash)
 
 What this script does it to schedule the execution of a process or service which doesn't needs any argument or option on its startup.
