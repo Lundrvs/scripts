@@ -8,9 +8,10 @@ if [ -n $1 2>/dev/null ]
 then
 	if [ $1 == '-t' 2>/dev/null ]
 	then
-	shift;checkTime=$(date --date=$1);app=$2;setTime=$1;
+	shift;checkTime=$(date --date=$1);app=$2;setTime=$1;currentDate=`date +%m/%d/%Y`;currentTime=`date +%T`;
 		if [ $? == 0 2>/dev/null ] && [ ${#setTime} == 5 2>/dev/null ]
 		then
+		echo -e "$currentDate $currentTime -- shedown was called...\n" >> ~/.log/shedown.log;
 			until [ `date +%H:%M` == $setTime 2>/dev/null ]
 			do
 			count=`expr $count + 1`;
@@ -21,7 +22,7 @@ then
 			done
 			if [ `date +%H:%M` == $setTime 2>/dev/null ]
 			then
-			$app;
+			$app;echo -e "· shedown -t $setTime $app\n" >> ~/.log/shedown.log;
 			fi
 		else echo "Check help...";
 		fi
@@ -32,7 +33,8 @@ then
 	shift;setDate=$1;checkDate=$(date --date=$1);
 		if [ $? == 0 2>/dev/null ] && [ ${#setDate} == 8 2>/dev/null ]
 		then
-		shift;setTime=$1;checkTime=$(date --date=$1);app=$2;
+ 		echo -e "$currentDate $currentTime -- shedown was called...\n" >> ~/.log/shedown.log;
+		shift;setTime=$1;checkTime=$(date --date=$1);app=$2;currentDate=`date +%m/%d/%Y`;currentTime=`date +%T`;
 			if [ $? == 0 2>/dev/null ] && [ ${#setTime} == 5 2>/dev/null ]
 			then
 				until [ `date +%Y%m%d` == $setDate 2>/dev/null ] && [ `date +%H:%M` == $setTime 2>/dev/null ]
@@ -45,7 +47,8 @@ then
 				done
 				if [ `date +%Y%m%d` == $setDate 2>/dev/null ] && [ `date +%H:%M` == $setTime 2>/dev/null ]
 				then
-				$app;
+				$app;currentDate=`date +%m/%d/%Y`;currentTime=`date +%T`;
+                        	echo -e "-- $currentDate $currentTime $app -d $setDate $setTime\n" >> ~/.log/shedown.log
 				fi
 			fi else echo "Check help...";
 		fi else echo "Check help...";
