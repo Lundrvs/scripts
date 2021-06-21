@@ -1,11 +1,11 @@
 * [givown](./givown)
 
 Adds the given script to the directory "/usr/bin/" and gives user's ownership
-and full execution to be used by default as a command on the PATH variable.
+and full execution to be used by default (with no root priviledges) as a command on the PATH variable.
 
 * [duckl](./duckl)
 
-Browses the web in text mode with the search engine "duckduckgo" as the main page.
+Browses the web in text mode with the search engine "duckduckgo" as the main page. Relies on Lynx.
 
 * [telltime](./telltime.bash)
 
