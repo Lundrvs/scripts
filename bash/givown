@@ -28,6 +28,6 @@ then
 	echo -e "Example: sudo givown <script> <username>\n";
         echo -e "\n\tThe script must be given as its name and never as its path.\n";
         echo -e "¡Always execute this command on the current directory!";
-        echo -e "\nGiven scripts might be in the current directory.";
+        echo -e "\nGiven scripts must be in the current directory.";
 	fi
 fi
