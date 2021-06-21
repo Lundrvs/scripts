@@ -1,4 +1,8 @@
 
+* [duckl](./duckl)
+
+Browses the web in text mode with the search engine "duckduckgo" as the main page.
+
 * [telltime](./telltime.bash)
 
 Prints the current time on real time (second by second). As if you were watching the clock.

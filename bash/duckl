@@ -1,0 +1,17 @@
+#!/bin/bash
+check=$(lynx -help);state=$?;
+if [ $state != 0 2>/dev/null ]
+then
+echo -e "\nTo use this command, you must install \"lynx\":\t\`sudo apt-get update\`\n\t\t\t\t\t\t\`sudo apt-get install lynx\`";
+fi
+if [ $state == 0 2>/dev/null ]
+then
+	if [ -n $1 2>/dev/null ]
+	then
+	echo -e "\n\"duckl\" doesn't work with any argument. Just call it to use it.\n\nThis command relies on lynx.";
+	fi
+	if [ -z $1 2>/dev/null ]
+	then
+	lynx -accept_all_cookies https://www.duckduckgo.com
+	fi
+fi
