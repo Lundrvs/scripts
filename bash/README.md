@@ -1,3 +1,7 @@
+* [givown](./givown)
+
+Adds the given script to the directory "/usr/bin/" and gives user's ownership
+and full execution to be used by default as a command on the PATH variable.
 
 * [duckl](./duckl)
 

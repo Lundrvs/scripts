@@ -1,0 +1,33 @@
+#!/bin/bash
+if [ ${USER} != root 2>/dev/null ]
+then
+echo "Permission denied. Execute as root.";
+echo -e "\n\`givown -h\` for help.";
+fi
+#
+if [ ${USER} == root 2>/dev/null ]
+then
+	if [ -z $1 2>/dev/null ]
+	then
+	echo -e "Application and user required as parameter.\n";
+	echo -e "Example: sudo givown <script> <username>\n";
+	echo -e "\n\tThe script must be given as its name and never as its path.\n"
+	echo -e "¡Always execute this command on the current directory!";
+	echo -e "\nGiven scripts must be in the current directory.";
+	fi
+	#
+	if [ -n $1 2>/dev/null ] && [ $1 != ' ' 2>/dev/null ] && [ -n $2 2>/dev/null ] || [ $1 != '-h' 2>/dev/null ]
+	then
+	app=$1;uname=$2;
+	cp -r ./"$app" /usr/bin/.;
+	chown "$uname" /usr/bin/"$app";
+	chmod 700 /usr/bin/"$app";
+	fi
+	if [ $1 == '-h' 2>/dev/null ]
+	then
+	echo -e "Example: sudo givown <script> <username>\n";
+        echo -e "\n\tThe script must be given as its name and never as its path.\n";
+        echo -e "¡Always execute this command on the current directory!";
+        echo -e "\nGiven scripts might be in the current directory.";
+	fi
+fi
