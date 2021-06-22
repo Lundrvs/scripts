@@ -19,9 +19,9 @@ then
 	if [ -n $1 2>/dev/null ] && [ -n $2 2>/dev/null ] || [ $1 != '-h' 2>/dev/null ]
 	then
 	app=$1;uname=$2;
-	cp -r ./"$app" /usr/bin/.;
-	chown "$uname" /usr/bin/"$app";
-	chmod 700 /usr/bin/"$app";
+	cp -r ./"$app" /usr/bin/. 2>/dev/null;
+	chown "$uname" /usr/bin/"$app" 2>/dev/null;
+	chmod 700 /usr/bin/"$app" 2>/dev/null;
 	fi
 	if [ -z $uname 2>/dev/null ]
 	then
