@@ -1,3 +1,7 @@
+* [genran](./genran)
+
+Generates random numbers of a maximum of 9 digits.
+
 * [givown](./givown)
 
 Adds the given script to the directory "/usr/bin/" and gives user's ownership
