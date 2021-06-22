@@ -1,0 +1,42 @@
+#!/bin/bash
+check=$(lynx -help 2>/dev/null);state=$?;
+if [ $state -ne 0 ]
+then
+echo -e "\nTo use this command, you must install \"lynx\"\n";
+fi
+if [ $state -eq 0 ]
+then
+	if [ "$1" != 'google' ] || [ "$1" != 'duckduckgo' ] || [ "$1" != 'bing' ] || [ "$1" != 'yahoo' ] || [ "$1" != 'ecosia' ]
+	then
+	echo -e "Missing options.\nUse one on the list:\n\tgoogle\n\tyahoo\n\tbing\n\tecosia\n\tduckduckgo";
+	echo -e "\n\nuse \`browtx -h\` for help.\n";
+	fi
+	if [ "$1" == 'google' ]
+	then
+	lynx --accept_all_cookies https://www.google.com
+	fi
+        if [ "$1" == 'duckduckgo' ]
+        then
+        lynx --accept_all_cookies https://www.duckduckgo.com
+        fi
+        if [ "$1" == 'yahoo' ]
+        then
+        lynx --accept_all_cookies https://www.seach.yahoo.com
+        fi
+        if [ "$1" == 'bing' ]
+        then
+        lynx --accept_all_cookies https://www.bing.com
+        fi
+        if [ "$1" == 'ecosia' ]
+        then
+        lynx --accept_all_cookies https://www.ecosia.com
+        fi
+fi
+if [ "$1" == '-h' ]
+then
+echo -e "\`browtx [search engine's provider name]\` \n";
+echo -e "\nThis command relies on Lynx. check Lynx's manual or documentation";
+echo -e "for details while on running.";
+echo -e "\nValid options:"
+echo -e "\n\tgoogle\n\tyahoo\n\tbing\n\tduckduckgo\n\tecosia";
+fi

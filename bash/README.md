@@ -1,15 +1,15 @@
-* [genran](./genran)
+* [genran](./genrand)
 
-Generates random numbers. Relies on `date`.
+Generates random numbers.
 
 * [givown](./givown)
 
 Adds the given script to the directory "/usr/bin/" and gives user's ownership
 and full execution to be used by default (with no root priviledges) as a command on the PATH variable.
 
-* [duckl](./duckl)
+* [browtx](./browtx)
 
-Browses the web in text mode with the search engine "duckduckgo" as the main page. Relies on Lynx.
+Browses the web in text mode with the given search engines as parameters. Relies on Lynx.
 
 * [telltime](./telltime)
 
