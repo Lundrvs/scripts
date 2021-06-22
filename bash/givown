@@ -16,12 +16,17 @@ then
 	echo -e "\nGiven scripts must be in the current directory.";
 	fi
 	#
-	if [ -n $1 2>/dev/null ] && [ $1 != ' ' 2>/dev/null ] && [ -n $2 2>/dev/null ] || [ $1 != '-h' 2>/dev/null ]
+	if [ -n $1 2>/dev/null ] && [ -n $2 2>/dev/null ] || [ $1 != '-h' 2>/dev/null ]
 	then
 	app=$1;uname=$2;
 	cp -r ./"$app" /usr/bin/.;
 	chown "$uname" /usr/bin/"$app";
 	chmod 700 /usr/bin/"$app";
+	fi
+	if [ -z $uname 2>/dev/null ]
+	then
+	echo -e "\nYou must specify who is going to own this script or application...";
+	echo -e "\nMissing value: <username>\n\t\`sudo givown -h\` to check help.";
 	fi
 	if [ $1 == '-h' 2>/dev/null ]
 	then
