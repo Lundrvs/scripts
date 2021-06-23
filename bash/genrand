@@ -32,7 +32,4 @@ fi
 if [ $1 == '-h' 2>/dev/null ]
 then
 echo -e "\nGenerates random numeric values.\n";
-echo -e "Prints a 9 digit value by default.\n";
-echo -e " \`genran <n>\` prints a number with 'n' digits, where 'n' is a number\n";
-echo -e "that represents the digits between values of 1 and 9.\n";
 fi
