@@ -1,0 +1,12 @@
+#!/bin/bash
+calc=$(($1)) 2>/dev/null
+if [ -n $1 ] && [ -z $2 ]
+then
+echo $calc;
+else
+echo "Operation must be introduced with no spaces.";
+fi
+if [ -z $1 ]
+then
+echo "Provide an operation.";
+fi

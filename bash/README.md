@@ -1,3 +1,7 @@
+* [calc](./calc)
+
+Bash calculator for basic operations.
+
 * [genran](./genrand)
 
 Generates random numbers.
