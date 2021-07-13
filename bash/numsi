@@ -1,0 +1,49 @@
+#!/bin/bash
+if [ -z $1 ]
+then
+echo -e "\nSyntax:\n	{ numsi <option> <value> } \n\tWhere <option> is one of the following:\n";
+echo -e "\t-decbi: convert from decimal to binary.";
+echo -e "\t-decoct: convert from decimal to octal.";
+echo -e "\tMore options are in development...\n";
+else
+	if [ -n $1 ] && [ -z $2 ]
+	then
+	echo -e "\nSyntax:\n	...";
+	fi
+fi
+if [ $1 == "decbi" 2>/dev/null ]
+then
+shift;result=$(($1/2));coc=$(($1%2));count=0;showbin[$count]="$coc";
+	until [ $result == 0 ] || [ $result == 1 ]
+	do
+	coc=$(($result%2));result=$(($result/2));count=$(($count+1));showbin[$count]="$coc";
+	done
+	if [ $result == 0 ] || [ $result == 1 ]
+	then
+	count=$(($count+1));showbin[$count]="$result";
+		until [ $count == 0 ]
+		do
+		echo -n ${showbin[$count]};count=$(($count-1));
+		done
+		echo -n ${showbin[0]};
+	echo " ";
+	fi
+fi
+if [ $1 == "decoct" 2>/dev/null ]
+then
+shift;result=$(($1/8));coc=$(($1%8));count=0;showbin[$count]="$coc";
+	until [ $result == 0 ] || [ $result == 1 ]
+	do
+	coc=$(($result%8));result=$(($result/8));count=$(($count+1));showbin[$count]="$coc";
+	done
+	if [ $result == 0 ] || [ $result == 1 ]
+	then
+	count=$(($count+1));showbin[$count]="$result";
+		until [ $count == 0 ]
+		do
+		echo -n ${showbin[$count]};count=$(($count-1));
+		done
+		echo -n ${showbin[0]};
+	echo " ";
+	fi
+fi

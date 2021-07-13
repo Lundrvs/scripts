@@ -1,3 +1,7 @@
+* [numsi](./numsi)
+
+Bash numeric system conversor (from decimal to binary, to octal, and viceversa).
+
 * [calc](./calc)
 
 Bash calculator for basic operations.

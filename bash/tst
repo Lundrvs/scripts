@@ -1,0 +1,8 @@
+#!/bin/bash
+count=0;
+arr=( "one" "two" "three" "four" "five");
+until [ $count == 5 ]
+do
+echo ${arr[$count]};
+count=$(($count+1));
+done

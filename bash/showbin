@@ -1,0 +1,8 @@
+#!/bin/bash
+result=$(($1/2));coc=$(($1%2));count=0;showbin[$count]="$coc";
+until [ $result == 1 ] || [ $result == 0 ]
+do
+result=$(($result/2));coc=$(($coc%2));showbin[$count]="$coc";
+count=$(($count+1));
+done
+echo ${showbin[*]};
