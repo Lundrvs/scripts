@@ -5,7 +5,7 @@ do
 count=`expr $count + 1`;
 	if [ $count = 500 2>/dev/null ]
 	then
-	count=0;
-	date +%T;
+	count=0;telltime=`date +%T`;
+	echo -n -e "\r$telltime";
 	fi
 done
